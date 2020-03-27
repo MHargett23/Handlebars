@@ -1,44 +1,44 @@
 <div class="container-fluid">
-    <section class="hero is-primary">
-        <div class="hero-body ">
-            <div class="container">
-                <div class="columns is-vcentered"></div>
-            </div>
-        </div>
-</div>
-
-<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-6">
-                <h2>Undevoured burgers</h2>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <div>
-                    {{burger_name}} <button type="button" class="btn btn-primary" value={{id}}> Devour </button>
-                </div>
-                {{/unless}}
-                {{/each}}
-            </div>
-            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <div class="col-sm-6">
-                        <h2>Devoured burgers</h2>
-                        {{#each burgers}}
-                        <div>
-                            {{#if devoured}}
-                            {{burger_name}}
-                            {{/if}}
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-body">
+            <div class="row">
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <div class="col-sm-6">
+                            <h2>Undevoured burgers</h2>
+                            {{#each burgers}}
+                            {{#unless devoured}}
+                            <div>
+                                {{burger_name}} <button type="button" class="btn btn-primary" value={{id}}> Devour
+                                </button>
+                            </div>
+                            {{/unless}}
+                            {{/each}}
                         </div>
-                        {{/each}}
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <form id="burgerform">
-                    <label for="addburger">What is the name of your burger?</label><br>
-                    <input type="text" id="addburger" name="addburger"><br>
-                    <button type="button" class="btn btn-primary" type="submit">Add A Burger</button>
-                </form>
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <div class="col-sm-6">
+                            <h2>Devoured burgers</h2>
+                            {{#each burgers}}
+                            <div>
+                                {{#if devoured}}
+                                {{burger_name}}
+                                {{/if}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <form id="burgerform">
+                        <label for="addburger">What is the name of your burger?</label><br>
+                        <input type="text" id="addburger" name="addburger"><br>
+                        <button type="button" class="btn btn-primary" type="submit">Add A Burger</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+</div>
